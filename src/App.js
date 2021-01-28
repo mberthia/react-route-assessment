@@ -4,7 +4,7 @@ import Welcome from "./components/welcome/Welcome";
 import Clock from "./components/clock/Clock";
 import Contact from "./components/contact/Contact";
 import Navigation from "./components/navigation/Navigation";
-import Error from "./error/Error";
+import Error from "./components/error/Error";
 
 function App() {
   return (
