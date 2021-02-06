@@ -6,6 +6,7 @@ import Contact from "./components/contact/Contact";
 import Navigation from "./components/navigation/Navigation";
 import Error from "./components/error/Error";
 import Jeopardy from "./components/jeopardy/Jeopardy";
+import jeopardyDisplay from "./components/jeopardydisplay/jeopardydisplay";
 
 function App() {
   return (

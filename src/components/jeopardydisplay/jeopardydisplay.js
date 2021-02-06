@@ -6,26 +6,26 @@ import axios from "axios";
 function Display(props) {
   return (
     <div>
-      <p>Title: {this.state.data.category.title}</p>
-      <p>Question: {this.state.data.question}</p>
-      <p>Points: {this.state.data.value}</p>
+      <p>Title: {props.title}</p>
+      <p>Question: {props.question}</p>
+      <p>Points: {props.value}</p>
 
-      <p>Score: {this.state.score}</p>
-      <form onSubmit={this.handleSubmit}>
+      <p>Score: {props.score}</p>
+      <form onSubmit={props.handleSubmit}>
         <div>
           <label htmlFor="">Answer</label>
           <input
             type="text"
             name="userAnswer"
-            value={this.state.formData.userAnswer}
-            onChange={this.handleChange}
+            value={props.userAnswer}
+            onChange={props.handleChange}
           ></input>
         </div>
-        <button onClick={this.checkAnswer}>Submit Answer</button>
+        <button onClick={props.checkAnswer}>Submit Answer</button>
       </form>
 
       <p>
-        <button onClick={this.reset}>Reset Score</button>
+        <button onClick={props.reset}>Reset Score</button>
       </p>
     </div>
   );

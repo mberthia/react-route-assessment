@@ -76,30 +76,17 @@ class Jeopardy extends Component {
 
     if (this.state.data.category) {
       return (
-        // <Display />
-        <div>
-          <p>Title: {this.state.data.category.title}</p>
-          <p>Question: {this.state.data.question}</p>
-          <p>Points: {this.state.data.value}</p>
-
-          <p>Score: {this.state.score}</p>
-          <form onSubmit={this.handleSubmit}>
-            <div>
-              <label htmlFor="">Answer</label>
-              <input
-                type="text"
-                name="userAnswer"
-                value={this.state.formData.userAnswer}
-                onChange={this.handleChange}
-              ></input>
-            </div>
-            <button onClick={this.checkAnswer}>Submit Answer</button>
-          </form>
-
-          <p>
-            <button onClick={this.reset}>Reset Score</button>
-          </p>
-        </div>
+        <Display
+          title={this.state.data.category.title}
+          value={this.state.data.value}
+          score={this.state.score}
+          userAnswer={this.state.formData.userAnswer}
+          question={this.state.data.question}
+          handleChange={this.handleChange}
+          checkAnswer={this.checkAnswer}
+          handleSubmit={this.handleSubmit}
+          reset={this.reset}
+        />
       );
     }
 
